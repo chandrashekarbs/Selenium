@@ -19,9 +19,10 @@ public class YatraPageAutofilling {
 		driver.get( "http://www.yatra.com/");
 		driver.findElement(By.id("BE_flight_origin_city")).sendKeys("ban");
 		
-		String xp ="//div[@class='ac_results']//li";
+		String cxp ="//div[@class='ac_results']//li"; //by me
+		String bxp = "//strong[text()='Bang']/..";
 		String axp = "//div[@class='ac_results']";  // Was not able to select properly 
-		List<WebElement> listofWebElements = driver.findElements(By.xpath(xp));
+		List<WebElement> listofWebElements = driver.findElements(By.xpath(bxp));
 		System.out.println(listofWebElements.size());
 //		for (WebElement v : listofWebElements )
 //		{
